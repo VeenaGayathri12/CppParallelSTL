@@ -17,6 +17,9 @@ set_target_properties(
         CXX_EXTENSIONS NO
 )
 
+set(CMAKE_CXX_COMPILER icpx)
+add_compile_options(-fsycl -fsycl-pstl-offload=gpu)
+
 target_link_libraries(
     ${PROJECT_NAME}
     PRIVATE
